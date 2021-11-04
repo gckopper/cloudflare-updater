@@ -6,7 +6,7 @@ import (
 )
 
 // Func that returns the new ip
-func getIp() net.IP {
+func GetIP() net.IP {
 	conn, err := net.Dial("udp", "[2620:119:35::35]:80")
 	if err != nil {
 		log.Fatal(err)
