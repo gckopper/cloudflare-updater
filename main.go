@@ -12,7 +12,7 @@ import (
 
 func main() {
 	//fmt.Println(glowing.GetIP())
-	file, err := os.Open("./secrets.txt")
+	file, err := os.Open("secrets.txt")
 	if err != nil {
 		fmt.Println(err)
 	}
