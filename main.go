@@ -8,9 +8,11 @@ import (
 	"github.com/gckopper/glowing-giggle/glowing"
 )
 
+// use $env:GOOS = "linux" to change the target os
+
 func main() {
 	//fmt.Println(glowing.GetIP())
-	file, err := os.Open("secrets.txt")
+	file, err := os.Open("./secrets.txt")
 	if err != nil {
 		fmt.Println(err)
 	}
