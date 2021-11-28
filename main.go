@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/gckopper/glowing-giggle/cloudflare"
-	"github.com/gckopper/glowing-giggle/glowing"
+	"github.com/gckopper/cloudflare-updater/cloudflare"
+	"github.com/gckopper/cloudflare-updater/ip"
 )
 
 // use $env:GOOS = "linux" to change the target os
@@ -26,6 +26,6 @@ func main() {
 	var domain string
 	fmt.Fscanf(file, "%d%s%s%s%s%s%s", &version, &zoneid, &recordid, &email, &authkey, &recordType, &domain)
 	//fmt.Println("valores", version, zoneid, recordid, email, authkey, recordType, domain)
-	cloudflare.UpdateAAAA(version, zoneid, recordid, email, authkey, recordType, domain, fmt.Sprint(glowing.GetIP()))
+	cloudflare.UpdateAAAA(version, zoneid, recordid, email, authkey, recordType, domain, fmt.Sprint(ip.GetIP()))
 	//fmt.Println(result)
 }
