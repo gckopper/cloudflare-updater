@@ -8,8 +8,8 @@ import (
 )
 
 func TestGetIP(t *testing.T) {
-	if fmt.Sprint(ip.GetIP()) != "2804:13d0:9928:9401:659c:8aa0:9388:3d9" {
-		t.Fatal("Wrong IP", fmt.Sprint(ip.GetIP()), "not", "2804:13d0:9928:9401:659c:8aa0:9388:3d9")
+	if fmt.Sprint(ip.GetIP(6)) != "2804:13d0:9928:9401:659c:8aa0:9388:3d9" {
+		t.Fatal("Wrong IP", fmt.Sprint(ip.GetIP(6)), "not", "2804:13d0:9928:9401:659c:8aa0:9388:3d9")
 	}
 }
 

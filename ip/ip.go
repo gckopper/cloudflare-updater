@@ -6,8 +6,20 @@ import (
 )
 
 // Func that returns the new ip
-func GetIP() net.IP {
-	conn, err := net.Dial("udp", "[2620:119:35::35]:80")
+func GetIP(version int) net.IP {
+	dnsserver := " "
+	switch version {
+	case 4:
+		dnsserver = "8.8.8.8:80"
+		break
+	case 6:
+		dnsserver = "[2620:119:35::35]:80"
+		break
+	}
+	if dnsserver == " " {
+		log.Fatal("Unsuported ip version: ", version)
+	}
+	conn, err := net.Dial("udp", dnsserver)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -18,7 +30,7 @@ func GetIP() net.IP {
 	return localAddr.IP
 }
 
-func ToVersion(iptype string) int8 {
+func ToVersion(iptype string) int {
 	switch iptype {
 	case "A":
 		return 4
