@@ -5,16 +5,14 @@ import (
 	"net"
 )
 
-// Func that returns the new ip
+// Func that returns the new ip (version is based on the int passed to the func)
 func GetIP(version int) net.IP {
 	dnsserver := " "
 	switch version {
 	case 4:
 		dnsserver = "8.8.8.8:80"
-		break
 	case 6:
 		dnsserver = "[2620:119:35::35]:80"
-		break
 	}
 	if dnsserver == " " {
 		log.Fatal("Unsuported ip version: ", version)
@@ -30,6 +28,7 @@ func GetIP(version int) net.IP {
 	return localAddr.IP
 }
 
+// Converts a dns type record to ip version
 func ToVersion(iptype string) int {
 	switch iptype {
 	case "A":

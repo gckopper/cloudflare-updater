@@ -23,10 +23,8 @@ func main() {
 	var authkey string
 	var recordType string
 	var domain string
-	var ttl string
-	var proxied string
-	fmt.Fscanf(file, "%d%s%s%s%s%s%s%s%s", &version, &zoneid, &recordid, &email, &authkey, &recordType, &domain, &ttl, &proxied)
+	fmt.Fscanf(file, "%d%s%s%s%s%s%s", &version, &zoneid, &recordid, &email, &authkey, &recordType, &domain)
 	//fmt.Println("valores", version, zoneid, recordid, email, authkey, recordType, domain)
-	cloudflare.UpdateRecord(version, zoneid, recordid, email, authkey, recordType, domain, "auto", ttl, proxied)
+	cloudflare.UpdateRecord(version, zoneid, recordid, email, authkey, recordType, domain, "auto")
 	//fmt.Println(result)
 }

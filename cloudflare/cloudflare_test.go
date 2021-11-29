@@ -9,6 +9,7 @@ import (
 	"github.com/gckopper/cloudflare-updater/cloudflare"
 )
 
+// Get credentials from the secrets file to be able to test the functions
 func getCrefentials(version *int, zoneid *string, recordid *string, email *string, authkey *string, recordType *string, domain *string, ttl *string, proxied *string) {
 	file, err := os.Open("secrets.txt")
 	if err != nil {
