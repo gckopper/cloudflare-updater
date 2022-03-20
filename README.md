@@ -1,5 +1,5 @@
 # NOT MAINTAINED AND TO HELP ME LEARN
-This MUST NOT be used by a serious application. This is something I built to learn more about GOLANG and how to work with APIs. If you need something like this check the OFFICIAL GOLANG API thingy by CLOUDFLARE THEMSELFS
+This MUST NOT be used by a serious application. This is something I built to learn more about GOLANG and how to work with APIs. If you need something like this check the OFFICIAL GOLANG API thingy by CLOUDFLARE ITSELF
 # cloudflare-updater
 Bot to dynamicly change dns records on cloudflare.
 
