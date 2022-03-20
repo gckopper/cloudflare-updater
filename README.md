@@ -1,3 +1,5 @@
+# NOT MAINTAINED AND TO HELP ME LEARN
+This MUST NOT be used by a serious application. This is something I built to learn more about GOLANG and how to work with APIs
 # cloudflare-updater
 Bot to dynamicly change dns records on cloudflare.
 
